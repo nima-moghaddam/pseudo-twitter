@@ -11,10 +11,6 @@ const useStyles = makeStyles({
         backgroundColor: 'white',
         flex: 1
     },
-    leftSidebar: {
-        backgroundColor: 'white',
-        width: '25%'
-    },
     divider: {
         height: '100% !important',
         width: '1px !important',
