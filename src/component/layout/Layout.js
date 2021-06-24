@@ -3,6 +3,7 @@ import useStyles from "./style";
 import RightSidebar from "../rightSidebar/RightSidebar";
 import { Divider } from '@material-ui/core';
 import LeftSidebar from "../leftSidebar/LeftSidebar";
+import Home from './../../pages/home/Home';
 
 const Layout = () => {
 
@@ -10,13 +11,11 @@ const Layout = () => {
 
     return (
         <div className={classes.root}>
-            <RightSidebar></RightSidebar>
+            <RightSidebar/>
             <Divider orientation={'vertical'} className={classes.divider}></Divider>
-            <div className={classes.mainPart}>
-                منو اصلی
-            </div>
+            <Home/>
             <Divider orientation={'vertical'} className={classes.divider}></Divider>
-            <LeftSidebar></LeftSidebar>
+            <LeftSidebar/>
         </div>
     )
 }

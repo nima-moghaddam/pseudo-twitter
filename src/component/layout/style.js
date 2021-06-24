@@ -7,10 +7,6 @@ const useStyles = makeStyles({
         width: '100%',
         display: 'flex'
     },
-    mainPart: {
-        backgroundColor: 'white',
-        flex: 1
-    },
     divider: {
         height: '100% !important',
         width: '1px !important',
