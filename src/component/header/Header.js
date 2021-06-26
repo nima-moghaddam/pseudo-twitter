@@ -1,15 +1,14 @@
 import React from 'react'
-import useStyles from '../style'
-import HomeIcon from '@material-ui/icons/Home';
+import useStyles from './style'
 import { Typography } from '@material-ui/core';
 
-const Header = () => {
+const Header = ({icon , title}) => {
     const classes = useStyles()
 
     return (
         <div className={classes.header}>
-            <HomeIcon/>
-            <Typography className={classes.headerTitle}>خانه</Typography>
+            {icon}
+            <Typography className={classes.headerTitle}>{title}</Typography>
         </div>
     )
 }

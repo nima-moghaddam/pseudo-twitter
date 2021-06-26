@@ -1,23 +1,19 @@
 import React from 'react'
-import useStyles from './style'
 import { Divider } from '@material-ui/core';
-import NewTweet from './component/NewTweet';
-import TweetList from './component/TweetList';
+import TweetList from './../home/component/TweetList';
+import useStyles from '../home/style';
 import Header from './../../component/header/Header';
-import  HomeIcon  from '@material-ui/icons/Home';
 
-
-function Home() {
+function TweetsByHashTag() {
     const classes = useStyles()
 
     return (
         <div className={classes.root}>
-            <Header title={'خانه'} icon={<HomeIcon/>} />
+            <Header title={'کرونا ویروس'} icon={<img src={'images/hashtag.png'}/>}/>
             <Divider className={classes.divider} />
-            <NewTweet />
             <TweetList />
         </div>    
     )
 }
 
-export default Home
+export default TweetsByHashTag

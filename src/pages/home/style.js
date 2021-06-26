@@ -3,18 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
     root: {
         backgroundColor: '#dfe4ea',
-        flex: 1,
-        overflowY: 'auto'
-    },
-    header: {
-        padding: 18,
-        backgroundColor: 'white',
-        display: 'flex',
-    },
-    headerTitle: {
-        fontSize: '1.2rem',
-        fontWeight: 700,
-        marginRight: '0.5rem'
     },
     divider: {
         opacity: '0.15',
