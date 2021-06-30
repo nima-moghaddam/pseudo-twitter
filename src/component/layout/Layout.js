@@ -5,6 +5,7 @@ import { Divider } from '@material-ui/core';
 import LeftSidebar from "../leftSidebar/LeftSidebar";
 import Home from './../../pages/home/Home';
 import TweetsByHashTag from './../../pages/tweetsByHashTag/TweetsByHashTag';
+import TweetsByUser from './../../pages/tweetsByUser/TweetsByUser';
 
 const Layout = () => {
 
