@@ -27,7 +27,7 @@ const Tweet = ({probs}) => {
             </Grid>
             <Grid container direction={'row-reverse'} alignItems={'center'}>
                 <IconButton className={classes.newTweetImg}>
-                    <img src={'images/retweet.png'} />
+                    <img src={'/images/retweet.png'} />
                 </IconButton>
                 <IconButton className={classes.newTweetImg}>
                     <FavoriteIcon style={{color: 'red'}} />

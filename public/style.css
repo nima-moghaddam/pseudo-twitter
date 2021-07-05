@@ -6,3 +6,10 @@ body{
     content: attr(data-placeholder);
     color: grey;
 }
+a{
+    text-decoration: none;
+    color: unset;
+}
+a:visited {
+    color: unset;
+}

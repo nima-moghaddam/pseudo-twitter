@@ -1,20 +1,22 @@
 import React from 'react'
 import useStyles from './style';
 import  Grid  from '@material-ui/core/Grid';
-import { Typography, Divider, ButtonBase } from '@material-ui/core';
+import { Typography, Divider, ButtonBase} from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const Tweeter = ({name , id , img}) => {
     const classes = useStyles()
 
     return (
-        <ButtonBase>
+        <ButtonBase style={{width:'100%'}} >
         <Grid container direction={'row'} className={classes.tweeterGrid}>
                 <img src={img} style={{width:'50px'}}></img>
                 <Grid item container direction={'column'}  className={classes.tweeterProfText}>
                     <Typography className={classes.profName}>{name}</Typography>
                 <Typography className={classes.profId}>{id}</Typography>
                 </Grid>
-        </Grid></ButtonBase>
+            </Grid>
+        </ButtonBase>
     )
 }
 
@@ -22,27 +24,27 @@ const tweeter = [
     {
         name: 'xiaomi',
         id: '@Xiaomi',
-        img: 'images/xiaomi.png'
+        img: '/images/xiaomi.png'
     },
     {
         name: 'sumsung',
         id: '@sumsung',
-        img: 'images/samsung.png'
+        img: '/images/samsung.png'
     },
     {
         name: 'بیل گیتس',
         id: '@Bill_Gates',
-        img: 'images/bil.png'
+        img: '/images/bil.png'
     },
     {
         name: 'مایک بای',
         id: '@Mike_Bye',
-        img: 'images/mike.png'
+        img: '/images/mike.png'
     },
     {
         name: 'شیلی وایت',
         id: '@Shily_white',
-        img: 'images/shily.png'
+        img: '/images/shily.png'
     },
 ]
 
@@ -54,7 +56,7 @@ function LeftSidebar() {
     return (
         <div className={classes.root}>
             <Grid container direction={'row-reverse'}>
-                <img src={'images/user img.png'} ></img>
+                <img src={'/images/user img.png'} ></img>
                 <Grid item container direction={'column'}  className={classes.profText}>
                     <Typography className={classes.profName}>نیما مقدم</Typography>
                     <Typography className={classes.profId}>Nima.moghaddam</Typography>
@@ -67,11 +69,12 @@ function LeftSidebar() {
                 <Divider style={{marginRight:'-24px' , marginLeft: '-24px'}}/>
                 {
                     tweeter.map((item , index) => {
-                        return (<>
+                        return  (<Link to={`/users/${item.name}`}>
                             <Tweeter name={item.name} id={item.id} img={item.img} />
                             {index !== tweeter.length - 1
                                 && <Divider style={{ marginRight: '-24px', marginLeft: '-24px' }}/>}
-                            </>) })
+                                </Link>
+                            ) })
                 }
             </Grid>
         </div>

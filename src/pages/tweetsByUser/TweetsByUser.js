@@ -5,12 +5,12 @@ import useStyles from '../home/style';
 import Header from '../../component/header/Header';
 import PersonIcon from '@material-ui/icons/Person';
 
-function TweetsByUser() {
+function TweetsByUser(probs) {
     const classes = useStyles()
 
     return (
         <div className={classes.root}>
-            <Header title={'نیما مقدم'} icon={<PersonIcon/>}/>
+            <Header title={probs.match.params.user} icon={<PersonIcon/>}/>
             <Divider className={classes.divider} />
             <TweetList />
         </div>    
